@@ -1,6 +1,4 @@
-package Composition;
-
-import CompositionChallenge.SmartKitchen;
+package composition;
 
 public class MainBedroom {
 

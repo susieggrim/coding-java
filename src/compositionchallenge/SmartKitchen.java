@@ -1,4 +1,4 @@
-package CompositionChallenge;
+package compositionchallenge;
 
 public class SmartKitchen {
 
