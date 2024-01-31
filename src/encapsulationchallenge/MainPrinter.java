@@ -1,4 +1,4 @@
-package encapsulationchallenget;
+package encapsulationchallenge;
 
 public class MainPrinter {
 
