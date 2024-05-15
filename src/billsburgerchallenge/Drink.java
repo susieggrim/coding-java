@@ -12,13 +12,34 @@ public class Drink {
         this.drinkPrice = getDrinkPrice(drinkSize);
     }
 
+    public String getDrinkType() {
+        return drinkType;
+    }
+
+    public String getDrinkSize() {
+        return drinkSize;
+    }
+
+    public double getDrinkPrice() {
+        return drinkPrice;
+    }
+
     public double getDrinkPrice(String drinkSize) {
         return switch (drinkSize) {
+            case "deluxe" -> 0.00;
             case "small" -> 0.50;
             case "medium" -> 0.75;
             case "large" -> 1.00;
-            default -> 0.0;
+            default -> 1.50;
         };
+    }
 
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "drinkType='" + drinkType + '\'' +
+                ", drinkSize='" + drinkSize + '\'' +
+                ", drinkPrice=" + drinkPrice +
+                '}';
     }
 }
