@@ -4,11 +4,12 @@ public class BillsBurgerChallenge {
 
     public static void main(String[] args) {
 
+        System.out.println("===================================");
+
         System.out.println("Creating default meal: ");
         MealOrder mealOrder = new MealOrder();
-        System.out.println("Burger: " + mealOrder.getBurger());
-        System.out.println("Drink: " + mealOrder.getDrink());
-        System.out.println("Side Item: " + mealOrder.getSideItem());
+        mealOrder.printItemizedList();
+        mealOrder.printTotalMealAmount();
 
         System.out.println("===================================");
 
@@ -20,9 +21,8 @@ public class BillsBurgerChallenge {
         Drink drink = new Drink("Sprite", "large");
         SideItem sideItem = new SideItem("fries");
         MealOrder mealOrder1 = new MealOrder(burger, drink, sideItem);
-        System.out.println("Burger: " + mealOrder1.getBurger());
-        System.out.println("Drink: " + mealOrder1.getDrink());
-        System.out.println("Side Item: " + mealOrder1.getSideItem());
+        mealOrder1.printItemizedList();
+        mealOrder1.printTotalMealAmount();
 
         System.out.println("===================================");
 
@@ -31,19 +31,13 @@ public class BillsBurgerChallenge {
         deluxeBurger.setBurgerExtraTopping1("cheese");
         deluxeBurger.setBurgerExtraTopping2("bacon");
         deluxeBurger.setBurgerExtraTopping3("mushrooms");
-
         deluxeBurger.setDeluxeExtraTopping1("fried egg");
         deluxeBurger.setDeluxeExtraTopping2("avocado");
-
         Drink deluxeDrink = new Drink("Fanta","deluxe");
         SideItem deluxeSideItem = new SideItem("deluxe fries");
         MealOrder deluxeMealOrder = new MealOrder(deluxeBurger, deluxeDrink, deluxeSideItem);
-
-        System.out.println("Burger: " + deluxeMealOrder.getDeluxeBurger());
-        System.out.println("Drink: " + deluxeMealOrder.getDrink());
-        System.out.println("Side Item: " + deluxeMealOrder.getSideItem());
+        deluxeMealOrder.printItemizedList();
+        deluxeMealOrder.printTotalMealAmount();
     }
-
-
 
 }
