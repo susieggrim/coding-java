@@ -59,17 +59,34 @@ public class MealOrder {
         this.deluxeBurger = deluxeBurger;
     }
 
-    public void addAdditionalToppings(String topping1, String topping2, String topping3) {
-        if (this.burger.getBurgerType().equals("regular")) {
-            System.out.println("Sorry, unable to add additional toppings");
-        } else if (this.deluxeBurger.getBurgerType().equals("deluxe")) {
-            this.deluxeBurger.setBurgerExtraTopping1(topping1);
-            this.deluxeBurger.setBurgerExtraTopping2(topping2);
-            this.deluxeBurger.setBurgerExtraTopping3(topping3);
-        } else {
-            this.burger.setBurgerExtraTopping1(topping1);
-            this.burger.setBurgerExtraTopping2(topping2);
-            this.burger.setBurgerExtraTopping3(topping3);
+    public void addAdditionalToppings(String topping) {
+        if (nonNull(this.burger)) {
+            if (this.burger.getBurgerType().equals("regular")) {
+                System.out.println("Sorry, unable to add additional toppings. Topping: " + topping);
+            } else {
+                if (!nonNull(this.burger.getBurgerExtraTopping1())) {
+                    this.burger.setBurgerExtraTopping1(topping);
+                } else if (!nonNull(this.burger.getBurgerExtraTopping2())) {
+                    this.burger.setBurgerExtraTopping2(topping);
+                } else if (!nonNull(this.burger.getBurgerExtraTopping3())) {
+                    this.burger.setBurgerExtraTopping3(topping);
+                } else {
+                    System.out.println("Unable to add more toppings");
+                }
+            }
+        }
+        if (nonNull(this.deluxeBurger)) {
+            if (!nonNull(this.deluxeBurger.getBurgerExtraTopping1())) {
+                this.deluxeBurger.setDeluxeExtraTopping1(topping);
+            } else if (!nonNull(this.deluxeBurger.getBurgerExtraTopping2())) {
+                this.deluxeBurger.setBurgerExtraTopping2(topping);
+            } else if (!nonNull(this.deluxeBurger.getBurgerExtraTopping3())) {
+                this.deluxeBurger.setBurgerExtraTopping3(topping);
+            } else if (!nonNull(this.deluxeBurger.getDeluxeExtraTopping1())) {
+                this.deluxeBurger.setDeluxeExtraTopping1(topping);
+            } else if (!nonNull(this.deluxeBurger.getDeluxeExtraTopping2())) {
+                this.deluxeBurger.setDeluxeExtraTopping2(topping);
+            }
         }
     }
 
@@ -79,9 +96,16 @@ public class MealOrder {
     }
 
     public void changeDrinkSize(String size) {
-        if (!this.burger.getBurgerType().equals("regular")) {
-            this.drink = new Drink(drink.getDrinkType(), size);
+        if (nonNull(burger)) {
+            if (!this.burger.getBurgerType().equals("regular")) {
+                this.drink = new Drink(drink.getDrinkType(), size);
+            }
         }
+
+        if (nonNull(deluxeBurger)) {
+            System.out.println("Unable to change drink size for deluxe burger");
+        }
+
     }
 
     public void printItemizedList() {

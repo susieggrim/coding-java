@@ -17,10 +17,12 @@ public class BillsBurgerChallenge {
         Burger burger = new Burger("Double cheese burger", 3.25);
         burger.setBurgerExtraTopping1("bacon");
         burger.setBurgerExtraTopping2("mushrooms");
-        burger.setBurgerExtraTopping3("avocado");
         Drink drink = new Drink("Sprite", "large");
         SideItem sideItem = new SideItem("fries");
         MealOrder mealOrder1 = new MealOrder(burger, drink, sideItem);
+        mealOrder1.changeDrinkSize("medium");
+        mealOrder1.addAdditionalToppings("avocado");
+        mealOrder1.addAdditionalToppings("tomato");
         mealOrder1.printItemizedList();
         mealOrder1.printTotalMealAmount();
 
@@ -36,6 +38,7 @@ public class BillsBurgerChallenge {
         Drink deluxeDrink = new Drink("Fanta","deluxe");
         SideItem deluxeSideItem = new SideItem("deluxe fries");
         MealOrder deluxeMealOrder = new MealOrder(deluxeBurger, deluxeDrink, deluxeSideItem);
+        deluxeMealOrder.changeDrinkSize("small");
         deluxeMealOrder.printItemizedList();
         deluxeMealOrder.printTotalMealAmount();
     }
