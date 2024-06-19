@@ -6,7 +6,7 @@ import java.util.Random;
 public class ArrayChallenge {
 
     public static void main(String[] args) {
-        int[] randomArray = getArray(5);
+        int[] randomArray = getArray(11);
 
         System.out.println("random array: " + Arrays.toString(randomArray));
         System.out.println("Inverse sorted random array: " + Arrays.toString(getInverseSortedArray(randomArray)));
@@ -16,7 +16,7 @@ public class ArrayChallenge {
         int [] newArray = new int[numberOfElements];
         Random randomInt = new Random();
 
-        for (int i = 0; i < 5; i++ ) {
+        for (int i = 0; i < numberOfElements; i++ ) {
             newArray[i] = randomInt.nextInt(50);
         }
         return newArray;
