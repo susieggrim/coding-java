@@ -11,14 +11,14 @@ public class MainReverseArrayChallenge {
     }
 
     private static void reverse(int[] normalArray) {
-        System.out.println("Before: " + Arrays.toString(normalArray));
+        System.out.println("Array = " + Arrays.toString(normalArray));
         int [] reverseArray = new int[normalArray.length];
 
         for (int i = 0; i < normalArray.length; i++) {
             reverseArray[(normalArray.length - 1) - i] = normalArray[i];
         }
 
-        System.out.println("After: " + Arrays.toString(reverseArray));
+        System.out.println("Reversed array = " + Arrays.toString(reverseArray));
     }
 
 }
