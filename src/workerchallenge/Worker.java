@@ -1,3 +1,5 @@
+package workerchallenge;
+
 import java.time.LocalDate;
 
 public class Worker {
@@ -42,7 +44,7 @@ public class Worker {
 
     @Override
     public String toString() {
-        return "Worker{" +
+        return "workerchallenge.Worker{" +
                 "name='" + name + '\'' +
                 ", birthDate='" + birthDate + '\'' +
                 ", endDate='" + endDate + '\'' +

@@ -1,8 +1,6 @@
 public class Sum3And5Challenge {
 
     public static void main(String[] args) {
-
-
         int total = 0;
         int counter = 0;
 

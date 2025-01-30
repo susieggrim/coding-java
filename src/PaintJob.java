@@ -52,6 +52,4 @@ public class PaintJob {
         return numberOfBuckets;
     }
 
-
-
 }

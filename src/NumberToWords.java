@@ -5,7 +5,6 @@ public class NumberToWords {
     }
 
     public static void numberToWords(int number) {
-
         if (number < 0) {
             System.out.println("Invalid Value");
         } else {
@@ -49,7 +48,6 @@ public class NumberToWords {
 
             }
         }
-
     }
 
     public static int getDigitCount(int number) {

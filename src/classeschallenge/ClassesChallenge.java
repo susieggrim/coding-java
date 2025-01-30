@@ -1,3 +1,7 @@
+package classeschallenge;
+
+import classeschallenge.Account;
+
 public class ClassesChallenge {
 
     public static void main(String[] args) {

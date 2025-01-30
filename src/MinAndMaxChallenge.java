@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class MinAndMaxChallenge {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         Double min = null;
         Double max = null;

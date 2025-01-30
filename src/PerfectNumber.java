@@ -5,9 +5,7 @@ public class PerfectNumber {
     }
 
     public static boolean isPerfectNumber(int number) {
-
         int perfectNumber = 0;
-
         if (number > 0) {
             for (int i = 1; i < number; i++) {
                 if (number % i == 0) {
@@ -19,7 +17,6 @@ public class PerfectNumber {
                 return true;
             }
         }
-
         return false;
 
     }

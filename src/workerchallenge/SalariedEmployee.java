@@ -1,3 +1,5 @@
+package workerchallenge;
+
 public class SalariedEmployee extends Employee {
 
     private double annualSalary;

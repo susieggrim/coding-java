@@ -1,3 +1,5 @@
+package cuboidandrectanglechallenge;
+
 public class Rectangle {
 
     private double width;

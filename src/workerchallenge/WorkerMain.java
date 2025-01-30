@@ -1,3 +1,5 @@
+package workerchallenge;
+
 public class WorkerMain {
 
     public static void main(String[] args) {

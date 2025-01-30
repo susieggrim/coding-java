@@ -1,9 +1,7 @@
 
-
 public class SwitchChallenge {
 
     public static void main(String[] args) {
-
         char character = 'A';
 
         switch (character) {
@@ -27,6 +25,5 @@ public class SwitchChallenge {
         }
 
     }
-
 
 }

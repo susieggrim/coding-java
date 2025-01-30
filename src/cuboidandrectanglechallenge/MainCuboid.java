@@ -1,3 +1,5 @@
+package cuboidandrectanglechallenge;
+
 public class MainCuboid {
 
     public static void main(String[] args) {

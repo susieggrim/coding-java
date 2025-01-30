@@ -21,7 +21,6 @@ public class DayOfWeekChallenge {
     }
 
     public static void printWeekDay(int day) {
-
         String dayOfWeek = "Invalid day";
 
         if (day == 0) {
@@ -41,6 +40,5 @@ public class DayOfWeekChallenge {
         }
 
         System.out.println(day + " -> " + dayOfWeek);
-
     }
 }

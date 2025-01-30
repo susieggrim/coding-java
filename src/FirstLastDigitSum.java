@@ -1,7 +1,6 @@
 public class FirstLastDigitSum {
 
     public static void main(String[] args) {
-
         System.out.println(sumFirstAndLastDigit(5));
     }
 

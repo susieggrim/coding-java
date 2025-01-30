@@ -25,7 +25,6 @@ public class ThePrimeNumberChallenge {
                 return false;
             }
         }
-
         return true;
     }
 

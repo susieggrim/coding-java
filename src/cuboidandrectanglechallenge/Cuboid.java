@@ -1,3 +1,5 @@
+package cuboidandrectanglechallenge;
+
 public class Cuboid extends Rectangle {
 
     private double height;

@@ -1,4 +1,6 @@
-public class Employee extends Worker{
+package workerchallenge;
+
+public class Employee extends Worker {
 
     private long employeeId;
     private String hireDate;
@@ -16,7 +18,7 @@ public class Employee extends Worker{
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "workerchallenge.Employee{" +
                 "employeeId=" + employeeId +
                 ", hireDate='" + hireDate + '\'' +
                 "} " + super.toString();
