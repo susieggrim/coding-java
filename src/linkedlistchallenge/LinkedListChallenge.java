@@ -12,12 +12,13 @@ public class LinkedListChallenge {
         printMenu();
         String option = "M";
         var iterator = townLinkedList.listIterator();
+        boolean isForward = false;
 
         while(!option.equals("Q")) {
             option = scanner.nextLine();
             switch (option) {
-                case "F" -> getNext(iterator);
-                case "B" -> getPrevious(iterator);
+                case "F" -> isForward = getNext(iterator, isForward);
+                case "B" -> isForward = getPrevious(iterator, isForward);
                 case "L" -> printListOfPlaces(townLinkedList);
                 case "M" -> printMenu();
             };
@@ -38,27 +39,35 @@ public class LinkedListChallenge {
         return townLinkedList;
     }
 
-    private static void getNext(ListIterator<Town> iterator) {
+    private static boolean getNext(ListIterator<Town> iterator, boolean isForward) {
+        if (!isForward && iterator.hasNext()) {
+            iterator.next();
+        }
         if (iterator.hasNext()) {
             Town town = iterator.next();
-            System.out.println(town.getTown() + " - " + town.getDistance());
+            System.out.println(town.town() + " - " + town.distance());
         } else{
             System.out.println("Unable to continue. You have arrived to your destination!");
         }
+        return true;
     }
 
-    private static void getPrevious(ListIterator<Town> iterator) {
+    private static boolean getPrevious(ListIterator<Town> iterator, boolean isForward) {
+        if (isForward && iterator.hasPrevious()) {
+            iterator.previous();
+        }
         if (iterator.hasPrevious()) {
             Town town = iterator.previous();
-            System.out.println(town.getTown() + " - " + town.getDistance());
+            System.out.println(town.town() + " - " + town.distance());
         } else{
             System.out.println("Unable to go backward. You're in your initial point");
         }
+        return false;
     }
 
     private static LinkedList<Town> printListOfPlaces(LinkedList<Town> townLinkedList) {
         for (Town town : townLinkedList) {
-            System.out.println(town.getTown() + " - " + town.getDistance());
+            System.out.println(town.town() + " - " + town.distance());
         }
         return townLinkedList;
     }
