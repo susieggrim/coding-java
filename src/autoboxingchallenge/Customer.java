@@ -1,17 +1,22 @@
 package autoboxingchallenge;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Customer {
 
-    private String name;
-    private List<Transaction> transactions; // transaction can be credit positive amount or debit a negative amount
+    private final String name;
+    private final ArrayList<Double> transactions = new ArrayList<>(); // transaction can be credit positive amount or debit a negative amount
+
+    public Customer(String name, Double transaction) {
+        this.name = name;
+        this.transactions.add(transaction);
+    }
 
     public String getName() {
         return name;
     }
 
-    public List<Transaction> getTransactions() {
+    public ArrayList<Double> getTransactions() {
         return transactions;
     }
 }
